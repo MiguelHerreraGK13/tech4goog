@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 430px;
+    height: 500px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background-image: image-set(#00FFFF);
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(to right, #093a2b, #187559);
+    transition: all 0.6s ease;
+}
+
+.cover .front,
+.cover .back {
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.cover .text-1 {
+    font-size: 20px; /* Ajusta según sea necesario */
+    writing-mode: vertical-rl;
+    margin: 0 0px; /* Ajusta el margen para separar el texto */
+    margin-left: 30px;
+}
+
+.cover .text-2 {
+    font-size: 20px;
+    writing-mode: vertical-rl;
+    margin: 0 120px; /* Ajusta el margen para separar el texto */
+    
+}
+
+.forms {
+    display: flex;
+    align-content: space-between;
+    position: relative;
+    width: 80%;
+    height: 100%;
+    padding: 50px;
+    margin-right: 50px;
+    background: #fff;
+    transition: all 0.8s ease;
+}
+
+.form-content {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form,
+.signup-form {
+    width: 90%;
+    padding: 50px;
+    transition: all 0.6s ease;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.input-boxes input {
+    display: block;
+    width: calc(100% - 20px); /* Ajusta el ancho para agregar espacio */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 92%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background: #187559;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #155e46; /* Ajusta el color del hover si es necesario */
+}
+
+/* Animación para alternar entre formularios */
+#flip:checked ~ .cover {
+    transform: rotateY(180deg);
+}
+
+#flip:checked ~ .forms .form-content {
+    transform: translateX(-50%);
+}
+
+/* Estilo del botón de cambio */
+.toggle {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: #187559;
+    cursor: pointer;
+    text-align: center;
+}

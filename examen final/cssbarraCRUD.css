@@ -1,0 +1,39 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo de la barra de navegación */
+.navbar {
+    display: flex;
+    gap: 10px; /* Espaciado entre los botones */
+}
+
+/* Estilo de los botones */
+.navbar a {
+    display: inline-block;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    background-color: #000; /* Fondo negro */
+    border-top: 2px solid #d3d3d3; /* Borde gris claro arriba */
+    border-right: 2px solid #d3d3d3; /* Borde gris claro derecha */
+    border-bottom: 2px solid #696969; /* Borde gris oscuro abajo */
+    border-left: 2px solid #696969; /* Borde gris oscuro izquierda */
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease; /* Efecto de crecimiento suave */
+}
+
+/* Efecto al pasar el puntero sobre los botones */
+.navbar a:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del botón */
+    cursor: pointer;
+}
